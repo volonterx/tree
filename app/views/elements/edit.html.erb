@@ -1,0 +1,17 @@
+<h1>Elements#edit</h1>
+<%= form_for @element do |f| %>
+	<p>
+		<%= f.label :parent_id %>
+		<%= select ("", "element[parent_id]", @elements.map {|u| [u.id,u.id]}) %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :link %>
+		<%= f.text_field :link %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

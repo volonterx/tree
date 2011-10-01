@@ -1,0 +1,12 @@
+<h1>Elements#index</h1>
+<%= link_to "Новый элемент", new_element_path %>
+<ul>
+<% @elements.each do |element| %>
+	<li>id: <%= element.id %>, pi = <%= element.parent_id %>, name = <%= element.name %>, link: <%= element.link %>
+	<br><%= link_to "edit", edit_element_path(element) %>&nbsp;|&nbsp;
+	<%= link_to "destroy", element_path(element), :method => :delete %>
+<% end %>
+
+<script type="text/javascript">alert("<%= @element14.name %>")</script>
+
+</ul>
